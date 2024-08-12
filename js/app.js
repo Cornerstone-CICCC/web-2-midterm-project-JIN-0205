@@ -141,13 +141,13 @@ fetch(`https://api.themoviedb.org/3/discover/movie?language=tr-TR&release_date.g
                 <div class="posters">
                   <img src="${posterUrl}" alt="poster" class="poster">
                   <img src="${backdrop}" alt="back-drop" class="back-drop">
-                <d/iv>
+                </div>
                 <div class="hide-context">
                   <div class="hide-title">${movie.title}</div>
                   <p class="overview">${movie.overview}</p>
                   <p class="release-date">Release: ${movie.release_date}</p>
                 </div>
-                <div class="movie-detail">
+                <div class="movie-detail ">
                   <h4>${movie.title}</h4>
                   <p>&#9733; ${rating}</p>
                 </div>
@@ -155,15 +155,15 @@ fetch(`https://api.themoviedb.org/3/discover/movie?language=tr-TR&release_date.g
               searchResults.appendChild(listItem);
             });
   
-            searchLists.classList.add('search-lists-appear'); // 検索結果がある場合はクラスを追加
+            searchLists.classList.add('search-lists-appear');
           } else {
-            searchLists.classList.remove('search-lists-appear'); // 検索結果がない場合はクラスを削除
+            searchLists.classList.remove('search-lists-appear');
           }
         })
         .catch(err => console.error('Fetch error:', err));
     } else {
-      searchResults.innerHTML = ''; // 検索結果をクリア
-      searchLists.classList.remove('search-lists-appear'); // クエリが短い場合はクラスを削除
+      searchResults.innerHTML = '';
+      searchLists.classList.remove('search-lists-appear'); 
     }
   });
   

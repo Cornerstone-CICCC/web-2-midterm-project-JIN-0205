@@ -118,7 +118,9 @@ main .container h2 span {
   -webkit-text-stroke: 2px black;
 }
 main .container p {
-  width: 80%;
+  text-align: center;
+  font-size: 2rem;
+  width: 75%;
 }
 
 .theme-btn {
